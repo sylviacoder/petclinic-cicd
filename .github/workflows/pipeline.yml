@@ -2,7 +2,7 @@ name: CI/CD Pipeline - PetClinic
  
 on:
   push:
-    branches: [ main ]
+    branches: [ dev, main ]
   pull_request:
     branches: [ main ]
 
@@ -23,7 +23,7 @@ env:
   AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
   ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
   ECS_SERVICE: ${{ secrets.ECS_SERVICE }}
-  
+
  
 jobs:
   gitleaks:
